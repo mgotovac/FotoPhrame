@@ -247,6 +247,7 @@ class _FotoPhrameState extends State<FotoPhrame> {
   Widget build(BuildContext context) {
     if (_loading) {
       return Scaffold(
+        appBar: AppBar(),
         body: const Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -270,7 +271,7 @@ class _FotoPhrameState extends State<FotoPhrame> {
               const SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).pushReplacement(
+                  Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (context) => const SetupScreen(),
                     ),
